@@ -1,0 +1,40 @@
+{
+  "name": "react-client",
+  "version": "1.0.0",
+  "description": "Simple react app",
+  "main": "index.js",
+  "scripts": {
+    "server": "webpack-dev-server --config webpack.config.js --open --progress --profile --watch --content-base src/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/asibilla/react-client.git"
+  },
+  "author": "Andy Sibilla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asibilla/react-client/issues"
+  },
+  "homepage": "https://github.com/asibilla/react-client#readme",
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.24.4",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "css-loader": "^0.28.11",
+    "dotenv-webpack": "^1.5.7",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.4",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
