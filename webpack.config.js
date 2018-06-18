@@ -1,7 +1,7 @@
 'use strict';
 
 const path = require('path');
-const dotenv = require('dotenv-webpack');
+const Dotenv = require('dotenv-webpack');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -10,7 +10,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
  * @return {[type]} [description]
  */
 module.exports = (env={}) => {
-
   return {
     mode: 'development',
     entry: [path.join(__dirname, 'src', 'index.js')],
@@ -55,7 +54,8 @@ module.exports = (env={}) => {
       new HtmlWebpackPlugin({
         filename: "./index.html",
         template: path.join(__dirname, 'src', 'app.html')
-      })
+      }),
+      new Dotenv()
     ]
   };
 };
