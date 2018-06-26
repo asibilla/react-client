@@ -9,7 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
  * [exports description]
  * @return {[type]} [description]
  */
-module.exports = (env={}) => {
+module.exports = () => {
   return {
     mode: 'development',
     entry: [path.join(__dirname, 'src', 'index.js')],
@@ -55,7 +55,9 @@ module.exports = (env={}) => {
         filename: "./index.html",
         template: path.join(__dirname, 'src', 'app.html')
       }),
-      new Dotenv()
+      new Dotenv({
+        path: './.env'
+      })
     ]
   };
 };

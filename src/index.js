@@ -11,7 +11,7 @@ const store = initStore();
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <App />
+      <App dispatch={store.dispatch} />
     </BrowserRouter>
   </Provider>, document.getElementById('root')
 );

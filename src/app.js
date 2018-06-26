@@ -1,6 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { getUsers } from './store/actions';
 
-class App extends Component {
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    props.dispatch(getUsers({}));
+  }
 
   render() {
     return (

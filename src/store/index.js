@@ -1,11 +1,8 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import { transformResponse } from './reducers';
+import { callApi } from './middleware';
 
-const defaultState = {};
-
-function reducer(state = defaultState, action) {
-  return state;
-}
 
 export default function initStore() {
-  return createStore(reducer, defaultState);
+  return createStore(transformResponse, applyMiddleware(callApi));
 }
